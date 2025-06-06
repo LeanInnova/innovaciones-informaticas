@@ -1,23 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar carrusel
-    const swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        effect: 'fade',
-        speed: 1000,
-    });
-
-    // Efecto al hacer clic en el botón (opcional)
-    const button = document.querySelector('.floating-button');
-    button.addEventListener('click', () => {
-        alert('¡Aquí irían tus servicios!');
-        // O redirigir a otra sección: window.location.href = "#servicios";
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling para los enlaces del navbar
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
