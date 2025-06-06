@@ -161,7 +161,7 @@ body {
 /* Mapa */
 .map-container {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 /* Agrega esto al final del archivo CSS */  
 .servicio {  
