@@ -30,15 +30,16 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero-section {
-    background: url('../img/hero-bg8.jpg') no-repeat center center/cover;
+    background: url('../img/hero-bg8.jpg') no-repeat center center;
+    background-size: contain;
     height: 100vh;
     min-height: 600px;
     position: relative;
     display: flex;
     align-items: center;
     color: white;
-}
 
 .hero-overlay {
     position: absolute;
