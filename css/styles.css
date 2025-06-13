@@ -5,32 +5,34 @@ body {
     color: #555;
     padding-top: 86px;
 }
-/* Estilo barra superior */
+/* Barra superior FIJADA ARRIBA */
 .top-bar {
-    background: linear-gradient(90deg, #1F618D, #2980B9); /* Degradado azul */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #1F618D, #2980B9);
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-family: 'Poppins', sans-serif;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1040; /* Mayor que navbar (1030) */
+    padding: 4px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.top-bar a {
-    color: #FFF9F0 !important;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-/* Ajuste para que la navbar no se solape */
+/* Ajusta el padding del body para compensar */
 body {
-    padding-top: 126px !important; /* Aumenta según altura de tu top-bar */
+    padding-top: 126px !important; /* 30px (top-bar) + 80px (navbar) + 16px extra */
 }
 
+/* Ajustes para móviles */
 @media (max-width: 768px) {
     body {
         padding-top: 110px !important;
     }
-    .top-bar p {
-        font-size: 0.8rem; /* Texto más pequeño en móviles */
+    .top-bar {
+        font-size: 0.75rem;
+        padding: 2px 0;
     }
 }
 
