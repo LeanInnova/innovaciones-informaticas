@@ -304,3 +304,7 @@ body {
 .navbar-brand > img {
     height: inherit !important;
 }
+
+.navbar-brand img:not([class]) {
+    height: 100px !important; /* Ataca solo el logo sin clase */
+}
