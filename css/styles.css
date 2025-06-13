@@ -189,6 +189,27 @@ body {
     margin: 0 10px !important;                     /* Controla el espacio externo de los elementos */
     color: #2c3e50 !important;                     /* Color azul oscuro (puedes cambiarlo) */
 }
+/* Estilo base para los marcos */
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 8px 15px !important; /* Aumenta el espacio interno */
+    margin: 0 5px !important;
+    border-radius: 8px !important; /* Esquinas redondeadas */
+    transition: all 0.3s ease !important;
+}
+
+/* Marco visible solo al hacer hover */
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1) !important; /* Fondo sutil */
+    box-shadow: 
+        0 0 0 2px rgba(52, 152, 219, 0.5) !important; /* Borde azul exterior */
+}
+
+/* Opción alternativa: Marco permanente */
+.navbar-nav .nav-link.permanent-frame {
+    border: 2px solid rgba(52, 152, 219, 0.3) !important; /* Borde azul claro */
+    background: rgba(52, 152, 219, 0.1) !important; /* Fondo muy translúcido */
+}
 
 /* Estilo específico para el texto del logo */
 .navbar-brand span {
