@@ -173,3 +173,17 @@ body {
   transform: translateY(-5px);  
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  
 }  
+/* Estilos específicos para los enlaces del menú */
+.navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif; /* Tipo de letra */
+    font-size: 1.1rem;                 /* Tamaño (1.1rem ≈ 17.6px) */
+    font-weight: 500;                  /* Grosor (500 = seminegrita) */
+    letter-spacing: 0.5px;             /* Espaciado entre letras */
+}
+
+/* Efecto hover opcional */
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
