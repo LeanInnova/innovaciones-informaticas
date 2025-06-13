@@ -181,12 +181,12 @@ body {
 }
 
 .navbar-nav .nav-link {
-    font-family: 'Poppins', sans-serif !important;
-    font-size: 1.1rem !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.5px !important;
-    text-transform: uppercase !important;
-    margin: 0 15px !important;
+    font-family: 'Roboto', sans-serif !important; /* Tipo de letra*/
+    font-size: 1.3rem !important;                  /* Tamaño (1.1rem ≈ 17.6px) */
+    font-weight: 600 !important;                   /* Grosor (500 = seminegrita) */
+    letter-spacing: 0.5px !important;              /* Espaciado entre letras */
+    text-transform: uppercase !important;          /* Convierte el texto a mayúsculas */
+    margin: 0 15px !important;                     /* Controla el espacio externo de los elementos */
 }
 
 /* Efecto hover opcional */
