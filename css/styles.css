@@ -289,3 +289,18 @@ body {
         height: 80px !important;  /* Mantiene tamaño original en móviles */
     }
 }
+
+/* ===== LOGO - ESTILO FINAL ===== */
+.custom-logo {
+    height: 100px !important; /* Tamaño deseado */
+    width: auto !important;
+    max-width: none !important;
+    transform: scale(1.2) !important; /* Escala adicional si es necesario */
+    transform-origin: left center;
+    margin-right: 15px !important; /* Espaciado con el texto */
+}
+
+/* Anula cualquier estilo de Bootstrap */
+.navbar-brand > img {
+    height: inherit !important;
+}
