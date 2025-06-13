@@ -5,6 +5,31 @@ body {
     color: #555;
     padding-top: 86px;
 }
+/* Base responsive */
+@media (max-width: 992px) {
+    body {
+        padding-top: 70px !important; /* Reduce espacio superior en móviles */
+    }
+    
+    /* Ajuste de contenedores */
+    .container, .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Tipografía responsive */
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2.section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .lead {
+        font-size: 1rem !important;
+    }
+}
 
 /* Estilos generales */
 :root {
