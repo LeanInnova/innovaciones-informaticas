@@ -268,3 +268,56 @@ body {
     align-items: center;
     height: 80px; /* Igual que la barra */
 }
+
+/* Barra Superior de Contacto */
+.top-navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 0;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1031; /* Un poco más alto que la navbar principal (1030) */
+}
+
+.top-navbar .contact-info span {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.top-navbar .social-icons a {
+    color: white;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.top-navbar .social-icons a:hover {
+    color: #3498db;
+    transform: scale(1.2);
+}
+
+/* Ajustar el padding-top del body para compensar ambas barras */
+body {
+    padding-top: 126px; /* Aumentado de 86px a 126px (86 + 40 de la nueva barra) */
+}
+
+/* Asegurar que la navbar principal quede debajo */
+.navbar {
+    top: 40px !important; /* Altura de la barra superior */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-navbar {
+        display: none; /* Ocultar en móviles para ahorrar espacio */
+    }
+    
+    body {
+        padding-top: 86px; /* Volver al valor original en móviles */
+    }
+    
+    .navbar {
+        top: 0 !important; /* Navbar principal en la parte superior */
+    }
+}
