@@ -196,7 +196,7 @@ body {
     font-size: 1.5rem !important;                           /* Tamaño (1.5rem ≈ 24px) */
     font-weight: 700 !important;                            /* Grosor: negrita */
     color: transparent !important;                          /* Para aplicar degradado */
-    background: linear-gradient(90deg, #1F618D, #17202A);   /* Degradado azul acero profundo */
+    background: linear-gradient(90deg, #2874A6, #1B2631);   /* Degradado azul nocturno */
     -webkit-background-clip: text !important;               /* Aplica color solo al texto */
     background-clip: text !important;
     letter-spacing: 1px;                                    /* Espaciado entre letras */
