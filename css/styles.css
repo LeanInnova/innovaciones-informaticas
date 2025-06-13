@@ -211,7 +211,7 @@ body {
 }
 /* Ajuste para el logo */
 .navbar-brand img {
-    height: 1200px !important; /* Aumenta el tamaño (original: 80px) */
+    height: 80px !important; /* Aumenta el tamaño (original: 80px) */
     width: auto;
     transition: all 0.8s ease; /* Efecto suave opcional */
 }
