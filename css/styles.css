@@ -268,10 +268,3 @@ body {
     align-items: center;
     height: 80px; /* Igual que la barra */
 }
-
-/* Marco para la barra de navegación */
-.navbar {
-    border-bottom: 3px solid var(--primary-color) !important; /* Borde inferior azul */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; /* Sombra sutil */
-    position: relative; /* Necesario para pseudo-elementos */
-}
