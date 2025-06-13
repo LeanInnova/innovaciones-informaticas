@@ -32,7 +32,7 @@ body {
 /* Hero Section */
 /* Hero Section */
 .hero-section {
-    background: url('../img/hero-bg10.png') no-repeat center center;
+    background: url('../img/fondo.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
     min-height: 600px;
