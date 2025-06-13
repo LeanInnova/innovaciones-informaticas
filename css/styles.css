@@ -175,12 +175,18 @@ body {
   transform: translateY(-5px);  
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  
 }  
-/* Estilos específicos para los enlaces del menú */
+/* Sobrescribe estilos de la navbar */
+.navbar {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 .navbar-nav .nav-link {
-    font-family: 'Poppins', sans-serif; /* Tipo de letra */
-    font-size: 1.5rem;                 /* Tamaño (1.1rem ≈ 17.6px) */
-    font-weight: 800;                  /* Grosor (500 = seminegrita) */
-    letter-spacing: 0.5px;             /* Espaciado entre letras */
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    margin: 0 15px !important;
 }
 
 /* Efecto hover opcional */
