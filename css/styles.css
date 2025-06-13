@@ -192,11 +192,11 @@ body {
 
 /* Estilo específico para el texto del logo */
 .navbar-brand span {
-    font-family: 'Audiowide', sans-serif !important;         /* Fuente futurista */
+    font-family: 'Audiowide', sans-serif !important;        /* Fuente futurista */
     font-size: 1.5rem !important;                           /* Tamaño (1.5rem ≈ 24px) */
     font-weight: 700 !important;                            /* Grosor: negrita */
     color: transparent !important;                          /* Para aplicar degradado */
-    background: linear-gradient(90deg, #3498db, #2c3e50);   /* Degradado azul */
+    background: linear-gradient(90deg, #1F618D, #17202A);   /* Degradado azul acero profundo */
     -webkit-background-clip: text !important;               /* Aplica color solo al texto */
     background-clip: text !important;
     letter-spacing: 1px;                                    /* Espaciado entre letras */
