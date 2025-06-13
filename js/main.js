@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Para la barra de navegación superior
+const topNavbar = document.querySelector('.top-navbar');
+if (topNavbar) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            topNavbar.style.transform = 'translateY(-40px)';
+            topNavbar.style.opacity = '0';
+        } else {
+            topNavbar.style.transform = 'translateY(0)';
+            topNavbar.style.opacity = '1';
+        }
+    });
+}
+    
     // Smooth scrolling para los enlaces del navbar
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
