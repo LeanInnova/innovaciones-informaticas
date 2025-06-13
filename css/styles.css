@@ -209,3 +209,31 @@ body {
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
+/* Ajuste para el logo */
+.navbar-brand img {
+    height: 90px !important; /* Aumenta el tamaño (original: 80px) */
+    width: auto;
+    transition: all 0.3s ease; /* Efecto suave opcional */
+}
+
+/* Ajuste para el texto de dos líneas */
+.navbar-brand .logo-text {
+    font-size: 1.6rem !important; /* Tamaño aumentado (original: ~1.5rem) */
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Altura fija para la barra de navegación */
+.navbar {
+    min-height: 80px !important; /* Mantiene la altura original */
+    max-height: 80px !important;
+    overflow: hidden; /* Evita desbordamientos */
+}
+
+/* Alineación vertical del contenido */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 80px; /* Igual que la barra */
+}
