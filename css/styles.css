@@ -192,7 +192,7 @@ body {
 
 /* Estilo específico para el texto del logo */
 .navbar-brand span {
-    font-family: 'Orbitron', sans-serif !important;         /* Fuente futurista */
+    font-family: 'Audiowide', sans-serif !important;         /* Fuente futurista */
     font-size: 1.5rem !important;                           /* Tamaño (1.5rem ≈ 24px) */
     font-weight: 700 !important;                            /* Grosor: negrita */
     color: transparent !important;                          /* Para aplicar degradado */
@@ -201,6 +201,7 @@ body {
     background-clip: text !important;
     letter-spacing: 1px;                                    /* Espaciado entre letras */
     text-transform: uppercase;                              /* Mayúsculas */
+    text-shadow: 0 0 8px rgba(52, 152, 219, 0.8);           /* Efecto Neon */
 }
 /* Efecto hover opcional */
 .navbar-nav .nav-link:hover {
