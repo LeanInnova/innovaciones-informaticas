@@ -32,7 +32,17 @@ body {
     left: 0;
 }
 
-/* Hero Section */
+/* Estilo para el título principal */
+.hero-section h1 {
+    display: inline-block; /* Marco solo alrededor del texto */
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    border: 2px solid var(--primary-color); /* Borde azul (#3498db) */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
 /* Hero Section */
 .hero-section {
     background: url('../img/fondo.jpg') no-repeat center center;
