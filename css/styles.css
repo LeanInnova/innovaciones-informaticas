@@ -141,6 +141,46 @@ body {
 .whatsapp-float i {
     margin-top: 5px;
 }
+/* === BARRA DE NAVEGACIÓN === */
+.navbar {
+    font-family: 'Poppins', sans-serif !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+    overflow: hidden;
+    position: relative; /* Necesario para el pseudo-elemento */
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2); /* Línea sutil inferior */
+}
+
+/* Marco decorativo (sin afectar layout) */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+              transparent, 
+              rgba(255, 255, 255, 0.3), 
+              transparent); /* Línea blanca difuminada */
+    z-index: 1;
+}
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 98%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+              transparent, 
+              rgba(52, 152, 219, 0.5), 
+              transparent); /* Línea azul difuminada */
+    z-index: 1;
+}
 
 /* Animaciones */
 .animate__animated {
@@ -253,18 +293,4 @@ body {
     line-height: 1.2;
     display: inline-block;
     vertical-align: middle;
-}
-
-/* Altura fija para la barra de navegación */
-.navbar {
-    min-height: 80px !important; /* Mantiene la altura original */
-    max-height: 80px !important;
-    overflow: hidden; /* Evita desbordamientos */
-}
-
-/* Alineación vertical del contenido */
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    height: 80px; /* Igual que la barra */
 }
