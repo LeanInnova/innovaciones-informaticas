@@ -190,6 +190,18 @@ body {
     color: #2c3e50 !important;                     /* Color azul oscuro (puedes cambiarlo) */
 }
 
+/* Estilo específico para el texto del logo */
+.navbar-brand span {
+    font-family: 'Orbitron', sans-serif !important;         /* Fuente futurista */
+    font-size: 1.5rem !important;                           /* Tamaño (1.5rem ≈ 24px) */
+    font-weight: 700 !important;                            /* Grosor: negrita */
+    color: transparent !important;                          /* Para aplicar degradado */
+    background: linear-gradient(90deg, #3498db, #2c3e50);   /* Degradado azul */
+    -webkit-background-clip: text !important;               /* Aplica color solo al texto */
+    background-clip: text !important;
+    letter-spacing: 1px;                                    /* Espaciado entre letras */
+    text-transform: uppercase;                              /* Mayúsculas */
+}
 /* Efecto hover opcional */
 .navbar-nav .nav-link:hover {
     color: var(--primary-color) !important;
