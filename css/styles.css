@@ -39,8 +39,8 @@ body {
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     border: 2px solid var(--primary-color); /* Borde azul (#3498db) */
     border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para profundidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Sombra de texto */
 }
 
 /* Hero Section */
