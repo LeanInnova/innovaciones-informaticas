@@ -178,8 +178,8 @@ body {
 /* Estilos específicos para los enlaces del menú */
 .navbar-nav .nav-link {
     font-family: 'Poppins', sans-serif; /* Tipo de letra */
-    font-size: 1.1rem;                 /* Tamaño (1.1rem ≈ 17.6px) */
-    font-weight: 500;                  /* Grosor (500 = seminegrita) */
+    font-size: 1.5rem;                 /* Tamaño (1.1rem ≈ 17.6px) */
+    font-weight: 800;                  /* Grosor (500 = seminegrita) */
     letter-spacing: 0.5px;             /* Espaciado entre letras */
 }
 
