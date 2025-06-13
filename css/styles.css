@@ -186,7 +186,7 @@ body {
     font-weight: 600 !important;                   /* Grosor (500 = seminegrita) */
     letter-spacing: 0.3px !important;              /* Espaciado entre letras */
     text-transform: uppercase !important;          /* Convierte el texto a mayúsculas */
-    margin: 0 15px !important;                     /* Controla el espacio externo de los elementos */
+    margin: 0 10px !important;                     /* Controla el espacio externo de los elementos */
     color: #2c3e50 !important;                     /* Color azul oscuro (puedes cambiarlo) */
 }
 
