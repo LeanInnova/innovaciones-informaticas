@@ -268,3 +268,23 @@ body {
     align-items: center;
     height: 80px; /* Igual que la barra */
 }
+
+/* Marco para la barra de navegación */
+.navbar {
+    border-bottom: 3px solid var(--primary-color) !important; /* Borde inferior azul */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important; /* Sombra sutil */
+    position: relative; /* Necesario para pseudo-elementos */
+}
+
+/* Opcional: Marco completo (en todos los lados) */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid rgba(52, 152, 219, 0.3); /* Borde azul semi-transparente */
+    pointer-events: none; /* Permite interacción con los elementos internos */
+    border-radius: 0; /* Ajusta si tu navbar tiene bordes redondeados */
+}
