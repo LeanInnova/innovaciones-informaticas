@@ -6,8 +6,33 @@ body {
     padding-top: 86px;
 }
 /* Base responsive */
+/* Agregar esto para mantener el tamaño original en desktop */
+.hero-section h1 {
+    font-size: 3.5rem !important; /* Tamaño original (o ajusta según necesites) */
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Ajuste solo para móviles (ahora más específico) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem !important; /* Tamaño para móviles */
+        padding: 10px 15px !important;
+        margin-bottom: 15px !important;
+    }
+}
 
 
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 1.8rem !important; /* Esta regla estaba reduciendo el tamaño */
+    }
+}
 
 @media (max-width: 768px) {
     footer .col-lg-4 {
