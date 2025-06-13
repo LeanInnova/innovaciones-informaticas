@@ -43,7 +43,7 @@ body {
     display: flex;
     align-items: center;
     color: white;
-
+}
 .hero-overlay {
     position: absolute;
     top: 0;
