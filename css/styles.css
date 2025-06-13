@@ -28,7 +28,21 @@ body {
     bottom: -10px;
     left: 0;
 }
+<style>
+    /* Logo más grande sin afectar la navbar */
+    .custom-logo {
+        height: 100px; /* Ajusta este valor */
+        width: auto; /* Mantiene la proporción */
+        transition: all 0.3s; /* Efecto suave al hacer hover (opcional) */
+    }
 
+    /* Asegura que la navbar no crezca */
+    .navbar {
+        min-height: 80px; /* Altura fija para la barra */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+</style>
 /* Hero Section */
 /* Hero Section */
 .hero-section {
