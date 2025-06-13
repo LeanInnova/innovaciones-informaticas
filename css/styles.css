@@ -268,3 +268,24 @@ body {
     align-items: center;
     height: 80px; /* Igual que la barra */
 }
+
+/* Ajuste para agrandar el logo sin afectar estructura */
+.navbar-brand img {
+    height: 100px !important;  /* Aumento desde 80px original */
+    width: auto;
+    transition: transform 0.3s ease;
+    transform-origin: left center; /* Escala desde la izquierda */
+}
+
+/* Compensación para mantener alineación */
+.navbar-brand {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        height: 80px !important;  /* Mantiene tamaño original en móviles */
+    }
+}
