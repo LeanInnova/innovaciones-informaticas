@@ -5,6 +5,34 @@ body {
     color: #555;
     padding-top: 86px;
 }
+/* Estilo barra superior */
+.top-bar {
+    background: linear-gradient(90deg, #1F618D, #2980B9); /* Degradado azul */
+    color: white;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a {
+    color: #FFF9F0 !important;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Ajuste para que la navbar no se solape */
+body {
+    padding-top: 126px !important; /* Aumenta según altura de tu top-bar */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 110px !important;
+    }
+    .top-bar p {
+        font-size: 0.8rem; /* Texto más pequeño en móviles */
+    }
+}
 
 /* Estilos generales */
 :root {
