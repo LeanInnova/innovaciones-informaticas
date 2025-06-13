@@ -321,3 +321,32 @@ body {
         top: 0 !important; /* Navbar principal en la parte superior */
     }
 }
+/* Ajustes para el logo y texto más a la izquierda */
+.navbar-brand {
+    margin-left: -15px !important; /* Empuja el logo más a la izquierda */
+    padding-right: 0 !important;
+}
+
+.navbar .container-fluid {
+    padding-left: 0 !important; /* Elimina el padding izquierdo del contenedor */
+}
+
+/* Ajuste adicional para el texto del logo */
+.navbar-brand .logo-text {
+    margin-left: 5px !important; /* Espacio entre logo y texto */
+}
+
+/* Asegurar que los items del menú no se peguen al logo */
+.navbar-collapse {
+    margin-left: 20px !important;
+}
+
+/* Responsive: ajustes para móviles */
+@media (max-width: 992px) {
+    .navbar-brand {
+        margin-left: 0 !important;
+    }
+    .navbar .container-fluid {
+        padding-left: 15px !important;
+    }
+}
