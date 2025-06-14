@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajos Realizados | Innovaciones Informáticas</title>
-    <!-- Usa los mismos estilos que la principal -->
-    <link href="../css/styles.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tus estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Barra de navegación similar a la principal -->
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-image: linear-gradient(to right, #8ecae6, #e0e1dd, #bde0fe, #0096c7);">
-        <div class="container-fluid">
-            <a class="navbar-brand ps-3" href="../">
-                <img src="../img/LOGO_3.png" alt="Innovaciones Informáticas" height="60">
+        <div class="container">
+            <a class="navbar-brand" href="../">
+                <img src="../img/LOGO_3.png" alt="Logo" height="60">
                 <span class="logo-text">Innovaciones<br>Informáticas</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,51 +33,38 @@
     </nav>
 
     <!-- Contenido principal -->
-    <section class="py-5" style="margin-top: 80px;">
-        <div class="container">
-            <h1 class="text-center mb-5">Nuestros Trabajos Realizados</h1>
+    <main class="container mt-5 pt-5">
+        <section class="py-5">
+            <h1 class="text-center mb-4">Nuestros Trabajos Realizados</h1>
             
-            <!-- Galería de trabajos -->
-            <div class="row g-4">
-                <!-- Ejemplo de item de trabajo -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card trabajo-card h-100">
-                        <img src="../img/trabajo1.jpg" class="card-img-top" alt="PC Gamer Armada">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>
+                Estamos actualizando nuestra galería de trabajos. Pronto verás aquí nuestros proyectos destacados.
+            </div>
+
+            <!-- Ejemplo de trabajo -->
+            <div class="row mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="../img/ejemplo-trabajo.jpg" class="card-img-top" alt="Trabajo ejemplo">
                         <div class="card-body">
-                            <h3>PC Gamer Profesional</h3>
-                            <p class="text-muted">Ryzen 7 | RTX 3080 | 32GB RAM</p>
-                            <div class="d-flex justify-content-between">
-                                <span class="badge bg-primary">Gaming</span>
-                                <span class="text-muted">Enero 2023</span>
-                            </div>
+                            <h3 class="h5">PC Gamer Personalizada</h3>
+                            <p class="text-muted">Configuración Ryzen 7 con RTX 3080</p>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Más items aquí -->
-                <div class="col-md-6 col-lg-4">
-    <div class="card trabajo-card h-100">
-        <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/TU_ID_DE_VIDEO" 
-                    title="Video demostrativo" 
-                    allowfullscreen></iframe>
-        </div>
-        <div class="card-body">
-            <h3>Instalación de Red Empresarial</h3>
-            <p class="text-muted">Cableado estructurado profesional</p>
-        </div>
-    </div>
-</div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer (similar al principal) -->
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4 mt-5">
-        <!-- ... -->
+        <div class="container text-center">
+            <p>&copy; 2023 Innovaciones Informáticas. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
