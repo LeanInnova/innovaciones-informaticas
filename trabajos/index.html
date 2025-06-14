@@ -121,12 +121,17 @@
  <!-- Ejemplo de trabajo 3 -->
                    <div class="col-md-4 col-lg-3">
     <div class="card h-100">
-        <div class="ratio ratio-16x9"> <!-- Mantiene relación de aspecto -->
-            <video controls class="card-img-top" poster="/innovaciones-informaticas/img/video.jpg">
-                <source src="/innovaciones-informaticas/trabajos/videos/video.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5
+        <!-- Video optimizado -->
+        <div class="ratio ratio-16x9">
+            <video controls playsinline preload="metadata" 
+                   poster="/innovaciones-informaticas/img/poster-reparacion.jpg"
+                   class="w-100 h-auto">
+                <source src="/innovaciones-informaticas/trabajos/videos/reparacion.mp4" type="video/mp4">
+                <source src="/innovaciones-informaticas/trabajos/videos/reparacion.webm" type="video/webm">
+                Tu navegador no soporta el elemento de video.
             </video>
         </div>
+        
         <div class="card-body">
             <h3 class="h5">Reparación de Notebook</h3>
             <p class="text-muted small">Potenciación de Notebook HP G-45</p>
