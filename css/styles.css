@@ -350,3 +350,110 @@ body {
         padding-left: 15px !important;
     }
 }
+/* =============================================== */
+/* ESTILOS RESPONSIVE DEFINITIVOS - NO INTERFIEREN */
+/* =============================================== */
+
+@media (max-width: 992px) {
+    /* Barra superior de contacto visible siempre */
+    .top-navbar {
+        display: flex !important;
+        align-items: center;
+        height: 40px;
+    }
+    
+    /* Reorganización de elementos en barra superior */
+    .top-navbar .row {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .top-navbar .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .top-navbar .contact-info span {
+        margin: 0 !important;
+        font-size: 0.8rem;
+    }
+    
+    .top-navbar .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* Ajuste del body para dos barras */
+    body {
+        padding-top: 120px;
+    }
+    
+    /* Navbar principal ajustada */
+    .navbar {
+        top: 40px !important;
+        min-height: 60px !important;
+    }
+    
+    /* Logo ajustado */
+    .navbar-brand img {
+        height: 50px !important;
+    }
+    
+    .navbar-brand .logo-text {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Menú de navegación completo */
+    .navbar-collapse {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        z-index: 1000;
+    }
+    
+    .navbar-nav {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        text-align: center;
+        padding: 10px !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Hero Section ajustado */
+    .hero-section h1 {
+        font-size: 1.8rem !important;
+        margin-top: 20px;
+    }
+    
+    /* Botones apilados */
+    .hero-section .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto !important;
+    }
+    
+    /* WhatsApp button visible */
+    .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes adicionales para pantallas muy pequeñas */
+    .top-navbar .contact-info span {
+        font-size: 0.7rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem !important;
+    }
+}
