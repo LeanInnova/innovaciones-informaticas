@@ -278,7 +278,12 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1031; /* Un poco más alto que la navbar principal (1030) */
+    z-index: 1031;
+    transition: all 0.3s ease;
+    /* Añadimos estas propiedades para garantizar que sea fija */
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .top-navbar .contact-info span {
@@ -299,7 +304,7 @@ body {
 
 /* Ajustar el padding-top del body para compensar ambas barras */
 body {
-    padding-top: 126px; /* Aumentado de 86px a 126px (86 + 40 de la nueva barra) */
+    padding-top: 126px; /* 40px (top-navbar) + 86px (navbar principal) */
 }
 
 /* Asegurar que la navbar principal quede debajo */
@@ -312,11 +317,9 @@ body {
     .top-navbar {
         display: none; /* Ocultar en móviles para ahorrar espacio */
     }
-    
     body {
-        padding-top: 86px; /* Volver al valor original en móviles */
+        padding-top: 70px; * Solo la navbar principal */
     }
-    
     .navbar {
         top: 0 !important; /* Navbar principal en la parte superior */
     }
