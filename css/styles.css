@@ -154,7 +154,13 @@ body {
     }
     
     .hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 1.8rem !important;
+        padding: 10px 15px !important;
+    }
+ .hero-section .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto !important;
     }
     
     .section-title::after {
@@ -201,6 +207,10 @@ body {
 }
 /* Estilo base para los marcos */
 .navbar-nav .nav-link {
+    font-size: 1.1rem !important;
+        padding: 10px !important;
+        margin: 5px 0 !important;
+        text-align: center;
     position: relative;
     padding: 8px 15px !important; /* Aumenta el espacio interno */
     margin: 0 5px !important;
@@ -281,9 +291,9 @@ body {
     z-index: 1031; /* Un poco más alto que la navbar principal (1030) */
 }
 
-.top-navbar .contact-info span {
-    display: inline-block;
-    margin-right: 15px;
+.top-navbar .contact-info {
+        text-align: center;
+        margin-bottom: 5px;
 }
 
 .top-navbar .social-icons a {
@@ -296,10 +306,17 @@ body {
     color: #3498db;
     transform: scale(1.2);
 }
+.top-navbar .contact-info span {
+        display: block;
+        margin: 5px 0;
+    }
+.top-navbar .social-icons {
+        text-align: center;
+    }
 
 /* Ajustar el padding-top del body para compensar ambas barras */
 body {
-    padding-top: 126px; /* Aumentado de 86px a 126px (86 + 40 de la nueva barra) */
+    padding-top: 120px; /* Para ambas barras moviles */
 }
 
 /* Asegurar que la navbar principal quede debajo */
@@ -310,7 +327,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .top-navbar {
-        display: none; /* Ocultar en móviles para ahorrar espacio */
+        display: block !important; /* Mostrar siempre la barra de contacto */
+        padding: 5px 0;
     }
     
     body {
@@ -338,8 +356,11 @@ body {
 
 /* Asegurar que los items del menú no se peguen al logo */
 .navbar-collapse {
-    margin-left: 20px !important;
-}
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
 
 /* Responsive: ajustes para móviles */
 @media (max-width: 992px) {
