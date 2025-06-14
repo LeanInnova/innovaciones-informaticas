@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Smooth scrolling para los enlaces del navbar
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        anchor.addEventListener('click', function(e) {
+            if (window.innerWidth < 992) {
+                // Cerrar menú en móviles al hacer clic
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    new bootstrap.Collapse(navbarCollapse).hide();
+                }
+            }
             
+            e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
