@@ -310,7 +310,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .top-navbar {
-        display: none; /* Ocultar en móviles para ahorrar espacio */
+        display: block !important; /* Mostrar siempre la barra de contacto */
+        padding: 5px 0;
     }
     
     body {
