@@ -170,7 +170,36 @@ body {
         font-size: 25px;
     }
 }
-
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 0 !important;
+    }
+    
+    .navbar-brand img {
+        height: 60px !important;
+    }
+    
+    .navbar-brand .logo-text {
+        font-size: 1.2rem !important;
+    }
+}
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+    }
+    
+    .whatsapp-btn img {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
+    
+    .whatsapp-btn span {
+        font-size: 0.9rem;
+    }
+}
 /* Mapa */
 .map-container {
     width: 100%;
@@ -309,25 +338,30 @@ body {
 
 /* Responsive */
 /* Eliminar la ocultación de la barra superior en móviles */
+/* Estilos específicos para la barra de contacto en móviles */
 @media (max-width: 768px) {
-    .top-navbar {
-        display: block !important; /* Mostrar siempre la barra de contacto */
-        padding: 5px 0;
+    .top-navbar .container {
+        padding: 0 10px;
     }
     
-    .top-navbar .contact-info {
-        text-align: center;
-        margin-bottom: 5px;
+    .top-navbar .row {
+        flex-direction: column;
+    }
+    
+    .top-navbar .col-md-6 {
+        width: 100%;
+        text-align: center !important;
     }
     
     .top-navbar .contact-info span {
-        display: block;
-        margin: 5px 0;
+        font-size: 0.8rem;
     }
     
-    .top-navbar .social-icons {
-        text-align: center;
+    .top-navbar .social-icons a {
+        margin: 0 8px;
+        font-size: 1.2rem;
     }
+}
     
     body {
         padding-top: 120px; /* Ajustar para ambas barras en móvil */
@@ -336,6 +370,21 @@ body {
     .navbar {
         top: 40px !important; /* Mantener debajo de la barra de contacto */
     }
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.menu-text {
+    font-size: 0.9rem;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: white;
+}
     
     /* Ajustes para el menú de navegación */
     .navbar-collapse {
@@ -362,6 +411,11 @@ body {
         display: block;
         width: 80%;
         margin: 10px auto !important;
+    }
+}
+@media (min-width: 769px) {
+    .menu-text {
+        display: none;
     }
 }
 /* Ajustes para el logo y texto más a la izquierda */
