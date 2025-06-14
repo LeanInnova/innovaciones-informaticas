@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Para la barra de navegación superior
 const topNavbar = document.querySelector('.top-navbar');
 if (topNavbar) {
-    window.addEventListener('scroll', function() {
+    // Opcional: Efecto al hacer scroll
+window.addEventListener('scroll', function() {
+    const topNavbar = document.querySelector('.top-navbar');
+    if (topNavbar && window.innerWidth > 768) {
         if (window.scrollY > 50) {
             topNavbar.style.transform = 'translateY(-40px)';
             topNavbar.style.opacity = '0';
@@ -10,7 +13,8 @@ if (topNavbar) {
             topNavbar.style.transform = 'translateY(0)';
             topNavbar.style.opacity = '1';
         }
-    });
+    }
+});
 }
     
     // Smooth scrolling para los enlaces del navbar
