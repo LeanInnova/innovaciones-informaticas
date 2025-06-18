@@ -28,38 +28,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Validación del formulario de contacto
-    const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitBtn = this.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status"></span> Enviando...';
+   document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // Mostrar feedback al usuario
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
 
-        try {
-            const formData = new FormData(this);
-            const response = await fetch(this.action, {
-                method: 'POST',
-                body: formData
-            });
-            
-            const result = await response.json();
-            
-            if (result.success) {
-                alert(result.message);
-                this.reset();
-            } else {
-                alert(result.message || 'Error al enviar el formulario');
-            }
-        } catch (error) {
-            alert('Error de conexión. Por favor intente más tarde.');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Enviar Mensaje';
+    // Enviar datos a FormSubmit
+    fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
         }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('¡Mensaje enviado con éxito! Te responderemos pronto.');
+            form.reset();
+        } else {
+            throw new Error('Error en el servidor');
+        }
+    })
+    .catch(error => {
+        alert('Error al enviar. Por favor, inténtalo nuevamente.');
+        console.error(error);
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar Mensaje';
     });
-}
+});
     
     // Animaciones al hacer scroll
     const animateOnScroll = function() {
