@@ -413,37 +413,42 @@
                 <div class="col-lg-6">
                     <div class="card shadow">
                         <div class="card-body p-4">
-                            <form id="contactForm" method="POST" action="enviar.php">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Teléfono</label>
-                                    <input type="tel" class="form-control" id="phone">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="service" class="form-label">Servicio de interés</label>
-                                    <select class="form-select" id="service">
-                                        <option selected>Seleccione un servicio</option>
-                                        <option>Soporte Técnico</option>
-                                        <option>Mantenimiento y Reparación</option>
-                                        <option>Venta de Computadoras</option>
-                                        <option>Instalación de Redes</option>
-                                        <option>Seguridad de Datos</option>
-                                        <option>Otro</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Mensaje</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
-                            </form>
+                           <!-- Formulario de contacto (asegúrate de que action apunta a tu email) -->
+<form id="contactForm" action="https://formsubmit.co/soporte@hotmail.com" method="POST">
+    <!-- Campos ocultos para configuración -->
+    <input type="hidden" name="_captcha" value="false"> <!-- Desactiva CAPTCHA -->
+    <input type="hidden" name="_template" value="table"> <!-- Estilo del email -->
+    <input type="hidden" name="_next" value="https://leaniinova.github.io/innovaciones-informaticas/gracias.html"> <!-- Página de confirmación -->
+    <input type="text" name="_honey" style="display:none"> <!-- Filtro anti-spam -->
+
+    <!-- Campos del formulario (conserva tus estilos actuales) -->
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+    </div>
+    <div class="mb-3">
+        <label for="service" class="form-label">Servicio de interés</label>
+        <select class="form-select" id="service" name="service">
+            <option selected>Seleccione un servicio</option>
+            <option>Soporte Técnico</option>
+            <option>Mantenimiento y Reparación</option>
+            <!-- ... otras opciones ... -->
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+</form>
                         </div>
                     </div>
                 </div>
