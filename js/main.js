@@ -29,25 +29,37 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Validación del formulario de contacto
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status"></span> Enviando...';
+
+        try {
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
             
-            // Validación simple
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
+            const result = await response.json();
             
-            if (name === '' || email === '' || message === '') {
-                alert('Por favor complete todos los campos requeridos.');
-                return;
+            if (result.success) {
+                alert(result.message);
+                this.reset();
+            } else {
+                alert(result.message || 'Error al enviar el formulario');
             }
-            
-            // Simular envío
-            alert('Gracias por su mensaje. Nos pondremos en contacto con usted pronto.');
-            contactForm.reset();
-        });
-    }
+        } catch (error) {
+            alert('Error de conexión. Por favor intente más tarde.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar Mensaje';
+        }
+    });
+}
     
     // Animaciones al hacer scroll
     const animateOnScroll = function() {
