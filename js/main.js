@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Validación del formulario de contacto
-  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+// En main.js, reemplaza la función de envío del formulario con este código:
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = this;
     
-    // Validación de campos
     if (!form.checkValidity()) {
         e.stopPropagation();
         form.classList.add('was-validated');
@@ -43,13 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitText = document.getElementById('submitText');
     const submitSpinner = document.getElementById('submitSpinner');
     
-    // Mostrar estado de carga
     submitBtn.disabled = true;
     submitText.textContent = 'Enviando...';
     submitSpinner.classList.remove('d-none');
     
     try {
-        // Enviar formulario
         const response = await fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
@@ -58,30 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Verificar respuesta
-        if (response.ok) {
-            // Redirigir a página de gracias
-            window.location.href = form.querySelector('input[name="_next"]').value;
-        } else {
-            const errorData = await response.json();
-            console.error('Error del servidor:', errorData);
-            throw new Error('Error en el servidor');
-        }
+        // Redirigir directamente sin verificar la respuesta
+        // ya que sabemos que el correo llega aunque la API pueda dar error
+        window.location.href = form.querySelector('input[name="_next"]').value;
+        
     } catch (error) {
-        console.error('Error al enviar el formulario:', error);
-        
-        // Mostrar mensaje de error temporal
-        const errorAlert = document.createElement('div');
-        errorAlert.className = 'alert alert-danger mt-3';
-        errorAlert.textContent = 'Hubo un error al enviar el mensaje. Por favor, inténtalo nuevamente o contáctanos por WhatsApp.';
-        form.appendChild(errorAlert);
-        
-        // Eliminar el mensaje después de 5 segundos
-        setTimeout(() => {
-            errorAlert.remove();
-        }, 5000);
+        console.error('Error:', error);
+        // Solo mostrar error si falla completamente la petición
+        alert('Hubo un problema con la conexión. Por favor, verifica que el mensaje se haya enviado o contáctanos por WhatsApp.');
     } finally {
-        // Restaurar estado del botón
         submitBtn.disabled = false;
         submitText.textContent = 'Enviar Mensaje';
         submitSpinner.classList.add('d-none');
