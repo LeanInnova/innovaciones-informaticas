@@ -28,15 +28,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Validación del formulario de contacto
-   document.getElementById('contactForm').addEventListener('submit', function(e) {
+   // Reemplaza la función de validación del formulario con este código
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const form = this;
+    
+    // Validación de campos
+    if (!form.checkValidity()) {
+        e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+    }
+    
     const submitBtn = form.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submitText');
+    const submitSpinner = document.getElementById('submitSpinner');
     
     // Mostrar feedback al usuario
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
-
+    submitText.textContent = 'Enviando...';
+    submitSpinner.classList.remove('d-none');
+    
     // Enviar datos a FormSubmit
     fetch(form.action, {
         method: 'POST',
@@ -47,19 +59,33 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => {
         if (response.ok) {
-            alert('¡Mensaje enviado con éxito! Te responderemos pronto.');
-            form.reset();
+            // Redirigir a la página de gracias si todo va bien
+            window.location.href = form.querySelector('input[name="_next"]').value;
         } else {
             throw new Error('Error en el servidor');
         }
     })
     .catch(error => {
-        alert('Error al enviar. Por favor, inténtalo nuevamente.');
-        console.error(error);
-    })
-    .finally(() => {
+        // Mostrar mensaje de error
+        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo nuevamente o contáctanos directamente por WhatsApp.');
+        console.error('Error en el formulario:', error);
+        
+        // Restaurar botón
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Enviar Mensaje';
+        submitText.textContent = 'Enviar Mensaje';
+        submitSpinner.classList.add('d-none');
+    });
+});
+
+// Validación en tiempo real
+document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea').forEach(input => {
+    input.addEventListener('input', function() {
+        if (this.checkValidity()) {
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+        } else {
+            this.classList.remove('is-valid');
+        }
     });
 });
     
