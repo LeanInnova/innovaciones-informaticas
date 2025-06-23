@@ -26,7 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('navbar-scrolled');
         }
     });
-    
+    // Agregar a main.js
+const emailField = document.getElementById('email');
+emailField.addEventListener('input', function() {
+    this.setCustomValidity('');
+    this.checkValidity();
+});
+
+emailField.addEventListener('invalid', function() {
+    if (this.validity.typeMismatch) {
+        this.setCustomValidity('Por favor ingresa un email válido');
+    } else {
+        this.setCustomValidity('Este campo es requerido');
+    }
+});
     // Validación del formulario de contacto
 // En main.js, reemplazar la función de envío actual con esta versión mejorada
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
