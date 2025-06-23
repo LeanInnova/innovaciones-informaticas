@@ -39,7 +39,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
         form.classList.add('was-validated');
         return;
     }
-    
+    document.getElementById('email').addEventListener('input', function() {
+        document.querySelector('input[name="_replyto"]').value = this.value;
+    });
     // Elementos de UI
     const submitBtn = form.querySelector('button[type="submit"]');
     const submitText = document.getElementById('submitText');
