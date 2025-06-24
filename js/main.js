@@ -59,7 +59,7 @@ emailField.addEventListener('invalid', function() {
     submitSpinner.classList.remove('d-none');
     
     // Enviar con EmailJS
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+    emailjs.sendForm('Consulta_innovaciones', 'ehdixra', form)
         .then(function() {
             // Redirigir a página de gracias
             window.location.href = 'gracias.html';
