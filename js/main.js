@@ -40,11 +40,6 @@ emailField.addEventListener('invalid', function() {
         this.setCustomValidity('Este campo es requerido');
     }
 });
-    // Validación del formulario de contacto
-// En main.js, reemplazar la función de envío actual con esta versión mejorada
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = this;
     
     // Validación del formulario
     if (!form.checkValidity()) {
@@ -52,9 +47,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         form.classList.add('was-validated');
         return;
     }
-    document.getElementById('email').addEventListener('input', function() {
-        document.querySelector('input[name="_replyto"]').value = this.value;
-    });
+    
     // Elementos de UI
     const submitBtn = form.querySelector('button[type="submit"]');
     const submitText = document.getElementById('submitText');
@@ -65,33 +58,21 @@ document.getElementById('contactForm').addEventListener('submit', async function
     submitText.textContent = 'Enviando...';
     submitSpinner.classList.remove('d-none');
     
-    try {
-        // Enviar formulario
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        // Redirigir inmediatamente sin esperar respuesta completa
-        // (FormSubmit a veces tarda en responder pero el correo se envía)
-        window.location.href = form.querySelector('input[name="_next"]').value;
-        
-    } catch (error) {
-        console.error('Error:', error);
-        // Mostrar opción alternativa si falla completamente
-        const shouldRetry = confirm('Hubo un problema con la conexión. ¿Deseas intentar nuevamente o prefieres contactarnos por WhatsApp?');
-        
-        if (shouldRetry) {
+    // Enviar con EmailJS
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form)
+        .then(function() {
+            // Redirigir a página de gracias
+            window.location.href = 'gracias.html';
+        }, function(error) {
+            // Mostrar error
+            console.error('Error al enviar:', error);
+            alert('Hubo un error al enviar el mensaje. Por favor, inténtalo nuevamente o contáctanos por WhatsApp.');
+            
+            // Restaurar botón
             submitBtn.disabled = false;
             submitText.textContent = 'Enviar Mensaje';
             submitSpinner.classList.add('d-none');
-        } else {
-            window.location.href = 'https://wa.me/+5491164839382';
-        }
-    }
+        });
 });
     
     // Animaciones al hacer scroll
