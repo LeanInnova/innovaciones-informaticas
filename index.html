@@ -92,7 +92,7 @@
       <!-- Modificar el botón del menú móvil -->
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars"></i> <!-- Icono más claro -->
-    <span class="ms-2">Menú</span> <!-- Texto descriptivo -->
+    <span class="ms-2">Menú</span> <!-- Texto deivo -->
 </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -415,17 +415,8 @@
                         <div class="card-body p-4">
                            <!-- Formulario de contacto (asegúrate de que action apunta a tu email) -->
 <!-- Reemplaza el formulario actual con este código -->
-<form id="contactForm" action="https://formsubmit.co/soporte.innovaciones@hotmail.com" method="POST">
-    <!-- Configuraciones mejoradas de FormSubmit -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://leaninnova.github.io/innovaciones-informaticas/gracias.html">
-    <input type="hidden" name="_subject" value="Nuevo contacto desde el sitio web">
-    <input type="hidden" name="_autoresponse" value="Gracias por contactar a Innovaciones Informáticas. Hemos recibido tu mensaje y te responderemos a la brevedad.">
-    <input type="hidden" name="_replyto" value="">
-    <input type="text" name="_honey" style="display:none">
-    
-    <!-- Campos del formulario -->
+<form id="contactForm">
+    <!-- Campos del formulario (sin cambios en la estructura visual) -->
     <div class="mb-3">
         <label for="name" class="form-label">Nombre <span class="text-danger">*</span></label>
         <input type="text" class="form-control" id="name" name="name" required minlength="2">
@@ -437,10 +428,12 @@
         <input type="email" class="form-control" id="email" name="email" required>
         <div class="invalid-feedback">Por favor ingresa un email válido.</div>
     </div>
+    
     <div class="mb-3">
         <label for="phone" class="form-label">Teléfono</label>
         <input type="tel" class="form-control" id="phone" name="phone">
     </div>
+    
     <div class="mb-3">
         <label for="service" class="form-label">Servicio de interés <span class="text-danger">*</span></label>
         <select class="form-select" id="service" name="service" required>
@@ -454,11 +447,13 @@
         </select>
         <div class="invalid-feedback">Por favor selecciona un servicio.</div>
     </div>
+    
     <div class="mb-3">
         <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
         <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
         <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
     </div>
+    
     <button type="submit" class="btn btn-primary w-100">
         <span id="submitText">Enviar Mensaje</span>
         <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
@@ -596,6 +591,11 @@
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- USO DE EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+<script>
+    emailjs.init('Consulta_innovaciones'); // Reemplazar con tu ID de EmailJS
+</script>
     
     <!-- JS Personalizado -->
     <script src="js/main.js"></script>
